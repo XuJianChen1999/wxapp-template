@@ -1,10 +1,11 @@
 import {isArray, isObject, isString} from './type'
+import {errorMsg, argError} from './error'
 import {TOKEN, USER} from './constant'
 
 // 统一性
 export const setItem = (key, value) => {
-  if (!key) throw new Error('Storage key is required')
-  if (!isString(key)) throw new Error(`key must be string, not of ${typeof key}`)
+  if (!key) errorMsg('Storage key is required')
+  if (!isString(key)) argError('string', key)
 
   if (isArray(value) || isObject(value)) {
     value = JSON.stringify(value)
@@ -13,8 +14,8 @@ export const setItem = (key, value) => {
   return wx.setStorageSync(key, value)
 }
 export const getItem = key => {
-  if (!key) throw new Error('Storage key is required')
-  if (!isString(key)) throw new Error(`key must be string, not of ${typeof key}`)
+  if (!key) errorMsg('Storage key is required')
+  if (!isString(key)) errorMsg('string', key)
 
   let data = wx.getStorageSync(key)
   try {
