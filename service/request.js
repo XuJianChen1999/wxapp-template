@@ -4,7 +4,7 @@ import {getToken} from '~/utils/local'
 import {isObject} from '~/utils/type'
 
 export default function request(options) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     const networkRes = await getNetworkType()
     if (networkRes.networkType === 'none') {
       wx.showToast({
@@ -16,13 +16,13 @@ export default function request(options) {
     }
 
     const token = getToken()
-    if (!token) {
-      wx.showToast({
-        title: '暂未登录',
-        icon: 'none'
-      })
-      return
-    }
+    // if (!token) {
+    //   wx.showToast({
+    //     title: '暂未登录',
+    //     icon: 'none'
+    //   })
+    //   return
+    // }
 
     const {
       url,
@@ -37,8 +37,11 @@ export default function request(options) {
       timeout = 8000,          // 超时时间
       hideLoadingTime = 500    // 多少毫秒隐藏loading
     } = options
-    const tHeader = {'Auth ': token, ...header}
-
+    const tHeader = {
+      'Authorization ': 'Bearer ' + token, 
+      ...header
+    }
+    console.log(tHeader)
     loading && wx.showLoading({title, mask})
     wx.request({
       url,

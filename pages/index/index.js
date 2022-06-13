@@ -13,6 +13,9 @@ Page({
     motto: 'Hello World',
     show: false
   },
+  async onLoad() {
+    
+  },
   showPopup() {
     this.setData({
       show: true
