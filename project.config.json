@@ -5,6 +5,9 @@
     "include": []
   },
   "setting": {
+    "useCompilerPlugins": [
+      "sass"
+    ],
     "bundle": false,
     "userConfirmedBundleSwitch": false,
     "urlCheck": true,
@@ -40,8 +43,7 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "disableUseStrict": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",

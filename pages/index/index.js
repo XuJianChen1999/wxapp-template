@@ -1,6 +1,9 @@
 // index.js
+import {formatTime} from '~/utils/util'
 // 获取应用实例
 const app = getApp()
+
+console.log(formatTime)
 
 Page({
   data: {
