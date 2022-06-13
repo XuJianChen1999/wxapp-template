@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <Tab tabs="{{[1, 2, 3]}}" current="{{current}}" bind:onSelectItem="onSelectItem" />
   <button bindtap="showPopup">点击</button>
   <Popup show="{{show}}" closeOnClickOverlay="{{true}}" position="bottom">
     <view style="width: 100vw; height: 300rpx;">

@@ -11,7 +11,8 @@ console.log(getToken())
 Page({
   data: {
     motto: 'Hello World',
-    show: false
+    show: false,
+    current: 0
   },
   async onLoad() {
     
@@ -19,6 +20,11 @@ Page({
   showPopup() {
     this.setData({
       show: true
+    })
+  },
+  onSelectItem(e) {
+    this.setData({
+      current: e.detail
     })
   }
 })

@@ -1,0 +1,14 @@
+<!--components/Tab/index.wxml-->
+<view class="tabs" style="background: {{background}}">
+  <view
+    class="tab-item {{current === index ? 'active': ''}}"
+    wx:for="{{tabs}}"
+    wx:key="index"
+    data-index="{{index}}"
+    bindtap="selectItem"
+    style="width: {{width}}rpx;"
+  >
+    <view>{{item}}</view>
+  </view>
+  <view class="active-bar" style="transform: translate3d({{transform}}rpx, 0, 0)" />
+</view>

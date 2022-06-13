@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "Popup": "../../components/Popup"
+    "Popup": "../../components/Popup",
+    "Tab": "../../components/Tab"
   }
 }
