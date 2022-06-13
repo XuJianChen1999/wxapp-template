@@ -1,5 +1,5 @@
 // index.js
-import {formatTime} from '~/utils/util'
+import {formatTime} from '~/function/date'
 // 获取应用实例
 const app = getApp()
 

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <button bindtap="showPopup">点击</button>
-  <Popup show="{{show}}" close-on-click-overlay="{{true}}" position="bottom">
+  <Popup show="{{show}}" closeOnClickOverlay="{{true}}" position="bottom">
     <view style="width: 100vw; height: 300rpx;">
       哈哈哈哈
     </view>

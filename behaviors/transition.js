@@ -1,4 +1,4 @@
-const {animationFrame} = require('../utils/utils.js')
+const {animationFrame} = require('../utils/system')
 const {isObject} = require('../utils/type')
 
 const getClassNames = name => ({
