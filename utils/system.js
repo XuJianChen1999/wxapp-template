@@ -23,3 +23,7 @@ exports.animationFrame = function requestAnimationFrame(cb) {
     cb()
   })
 }
+
+export const getNetworkType = async () => {
+  return await wx.getNetworkType()
+}
