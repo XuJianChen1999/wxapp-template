@@ -10,8 +10,8 @@ console.log(getToken())
 
 Page({
   data: {
-    motto: 'Hello World',
     show: false,
+    showCalendar: false,
     current: 0
   },
   async onLoad() {
@@ -21,6 +21,14 @@ Page({
     this.setData({
       show: true
     })
+  },
+  clickCalendar() {
+    this.setData({
+      showCalendar: true
+    })
+  },
+  onConfirm(e) {
+    console.log(e)
   },
   onSelectItem(e) {
     this.setData({

@@ -1,4 +1,4 @@
-const {animationFrame} = require('../utils/system')
+import {requestAnimationFrame} from '../utils/system'
 const {isObject} = require('../utils/type')
 
 const getClassNames = name => ({
@@ -48,7 +48,7 @@ module.exports = function transition(showDefaultValue) {
         const currentDuration = isObject(duration) ? duration.enter : duration
         this.status = 'enter'
         this.$emit('before-enter')
-        animationFrame(() => {
+        requestAnimationFrame(() => {
           if (this.status !== 'enter') return
           this.$emit('enter')
           this.setData({
@@ -57,7 +57,7 @@ module.exports = function transition(showDefaultValue) {
             classes: classNames.enter,
             currentDuration,
           })
-          animationFrame(() => {
+          requestAnimationFrame(() => {
             if (this.status !== 'enter') return
             this.transitionEnded = false
             this.setData({classes: classNames['enter-to']})
@@ -71,14 +71,14 @@ module.exports = function transition(showDefaultValue) {
         const currentDuration = isObject(duration) ? duration.leave : duration
         this.status = 'leave'
         this.$emit('before-leave')
-        animationFrame(() => {
+        requestAnimationFrame(() => {
           if (this.status !== 'leave') return
           this.$emit('leave')
           this.setData({
             classes: classNames.leave,
             currentDuration,
           })
-          animationFrame(() => {
+          requestAnimationFrame(() => {
             if (this.status !== 'leave') return
             this.transitionEnded = false
             setTimeout(() => this.onTransitionEnd(), currentDuration)

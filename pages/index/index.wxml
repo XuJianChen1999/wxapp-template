@@ -7,7 +7,7 @@
       哈哈哈哈
     </view>
   </Popup>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+  <button bindtap="clickCalendar">显示日历</button>
+  <Calendar type="multiple" show="{{showCalendar}}" bind:close="onClose" bind:confirm="onConfirm" />
 </view>

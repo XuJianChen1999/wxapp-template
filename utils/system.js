@@ -7,12 +7,12 @@ const getSystemInfoSync = () => {
   return systemInfo
 }
 
-exports.animationFrame = function requestAnimationFrame(cb) {
+export function requestAnimationFrame(cb) {
   const system = getSystemInfoSync()
 
   if (system.platform === 'devtools') {
     return setTimeout(() => {
-        cb()
+      cb()
     }, 1000 / 30)
   }
   return wx

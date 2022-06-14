@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Popup": "../Popup",
+    "Month": "./components/month",
+    "Header": "./components/header"
+  }
+}
