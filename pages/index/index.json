@@ -5,6 +5,7 @@
     "Calendar": "../../components/Calendar/index",
     "Form": "../../components/Form",
     "FormGroup": "../../components/FormGroup",
-    "Noticebar": "../../components/Noticebar"
+    "Noticebar": "../../components/Noticebar",
+    "Empty": "../../components/Empty"
   }
 }

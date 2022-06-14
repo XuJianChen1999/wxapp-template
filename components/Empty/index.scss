@@ -1,0 +1,13 @@
+/* components/Empty/index.wxss */
+@import '../../styles/var.scss';
+@import '../../styles/mixin.scss';
+
+.empty-container {
+  @include fl();
+  margin: 0 auto;
+  flex-direction: column;
+  font-size: $font-size-m;
+  image {
+    @include wh(300rpx, 300rpx);
+  }
+}
