@@ -1,9 +1,11 @@
 let systemInfo
 
-const getSystemInfoSync = () => {
-  if (systemInfo == null) {
+export const getSystemInfoSync = () => {
+  if (systemInfo === null) {
     systemInfo = wx.getSystemInfoSync()
   }
+
+  console.log(systemInfo)
   return systemInfo
 }
 

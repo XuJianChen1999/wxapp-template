@@ -1,0 +1,7 @@
+<!--pages/test/index.wxml-->
+<Navbar title="标题"
+  left-text="返回">
+  <!-- <view class="current-date">
+     <text>4月24日</text>
+  </view> -->
+</Navbar>
