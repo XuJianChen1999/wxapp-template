@@ -29,6 +29,7 @@ Page({
   },
   onConfirm(e) {
     console.log(e)
+    console.log(formatTime(e.detail[0]))
   },
   onSelectItem(e) {
     this.setData({
