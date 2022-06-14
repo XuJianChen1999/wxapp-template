@@ -21,19 +21,16 @@ Component({
   pageLifetimes: {
     show() {
       const that = this
-      console.log(that)
       this.setData({
         width: that.properties.tabs.length * 120,
       })
     }
   },
   observers: {
-    current(newVal, oldVal) {
-      console.log(newVal)
+    current(newVal) {
       this.setData({
         transform: 120 * newVal
       })
-      console.log(this.data.transform)
     }
   },
   methods: {
