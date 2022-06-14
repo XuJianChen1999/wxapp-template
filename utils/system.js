@@ -7,6 +7,16 @@ const getSystemInfoSync = () => {
   return systemInfo
 }
 
+export function getRect(context, selector) {
+  return new Promise(resolve => {
+    wx.createSelectorQuery()
+      .in(context)
+      .select(selector)
+      .boundingClientRect()
+      .exec((rect = []) => resolve(rect[0]))
+  })
+}
+
 export function requestAnimationFrame(cb) {
   const system = getSystemInfoSync()
 

@@ -4,6 +4,7 @@
     "Tab": "../../components/Tab",
     "Calendar": "../../components/Calendar/index",
     "Form": "../../components/Form",
-    "FormGroup": "../../components/FormGroup"
+    "FormGroup": "../../components/FormGroup",
+    "Noticebar": "../../components/Noticebar"
   }
 }

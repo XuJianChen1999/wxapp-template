@@ -4,6 +4,7 @@
 # component
 1. 弹出层
 2. 选项卡
+3. Form、Cell、Popup用法同vant
 
 # function
 1. 防抖、截流
