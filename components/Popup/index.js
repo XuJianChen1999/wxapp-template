@@ -69,8 +69,11 @@ MyComponent({
     },
     onClickOverlay() {
       this.$emit('click-overlay')
+      console.log(this)
       if (this.data.closeOnClickOverlay) {
         this.$emit('close')
+        // this.leave()
+        // this.onTransitionEnd()
       }
     },
     observeClass() {

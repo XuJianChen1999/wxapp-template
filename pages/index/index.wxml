@@ -10,4 +10,12 @@
 
   <button bindtap="clickCalendar">显示日历</button>
   <Calendar type="multiple" show="{{showCalendar}}" bind:close="onClose" bind:confirm="onConfirm" />
+  <FormGroup>
+    <Form
+      value="{{username}}"
+      label="用户名"
+      placeholder="请输入用户名"
+      error
+    />
+  </FormGroup>
 </view>

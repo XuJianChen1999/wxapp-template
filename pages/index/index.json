@@ -2,6 +2,8 @@
   "usingComponents": {
     "Popup": "../../components/Popup",
     "Tab": "../../components/Tab",
-    "Calendar": "../../components/Calendar/index"
+    "Calendar": "../../components/Calendar/index",
+    "Form": "../../components/Form",
+    "FormGroup": "../../components/FormGroup"
   }
 }

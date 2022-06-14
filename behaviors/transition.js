@@ -34,7 +34,7 @@ module.exports = function transition(showDefaultValue) {
     },
     ready() {
       if (this.data.show === true) {
-        this.observeShow(true, false);
+        this.observeShow(true, false)
       }
     },
     methods: {
@@ -88,11 +88,11 @@ module.exports = function transition(showDefaultValue) {
       },
       onTransitionEnd() {
         if (this.transitionEnded) return
-        this.transitionEnded = true;
+        this.transitionEnded = true
         this.$emit(`after-${this.status}`)
         const {show, display} = this.data
         if (!show && display) {
-          this.setData({ display: false })
+          this.setData({display: false})
         }
       }
     }

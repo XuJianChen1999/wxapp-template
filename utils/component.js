@@ -44,4 +44,18 @@ function MyComponent(vantOptions) {
   Component(options)
 }
 
+function canIUseNextTick() {
+  return wx.canIUse('nextTick');
+}
+
+export function nextTick(cb) {
+  if (canIUseNextTick()) {
+    wx.nextTick(cb)
+  } else {
+    setTimeout(() => {
+      cb();
+    }, 1000 / 30)
+  }
+}
+
 exports.MyComponent = MyComponent
