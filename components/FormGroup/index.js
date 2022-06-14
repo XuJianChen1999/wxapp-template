@@ -1,5 +1,6 @@
 // components/FormGroup/index.js
-import { MyComponent } from '~/utils/component';
+import { MyComponent } from '~/utils/component'
+
 MyComponent({
     props: {
         title: String,

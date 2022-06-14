@@ -1,4 +1,4 @@
-const {basic} = require('../behaviors/basic')
+import basic from '~/behaviors/basic'
 
 function mapKeys(source, target, map) {
   Object.keys(map).forEach((key) => {
@@ -7,7 +7,7 @@ function mapKeys(source, target, map) {
     }
   })
 }
-function MyComponent(vantOptions) {
+export function MyComponent(vantOptions) {
   const options = {};
   mapKeys(vantOptions, options, {
     data: 'data',

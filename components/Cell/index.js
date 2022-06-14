@@ -1,6 +1,6 @@
 // components/Cell/index.js
-import link from '../../behaviors/link'
-const {MyComponent} = require('~/utils/component')
+import link from '~/behaviors/link'
+import {MyComponent}from '~/utils/component'
 
 MyComponent({
   classes: [

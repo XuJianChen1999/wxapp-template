@@ -1,5 +1,5 @@
 // components/Overlay/Overlay.js
-const {MyComponent} = require('../../utils/component')
+import {MyComponent}from '~/utils/component'
 
 MyComponent({
   props: {

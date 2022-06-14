@@ -16,13 +16,13 @@ export default function request(options) {
     }
 
     const token = getToken()
-    // if (!token) {
-    //   wx.showToast({
-    //     title: '暂未登录',
-    //     icon: 'none'
-    //   })
-    //   return
-    // }
+    if (!token) {
+      wx.showToast({
+        title: '暂未登录',
+        icon: 'none'
+      })
+      return
+    }
 
     const {
       url,

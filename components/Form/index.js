@@ -1,6 +1,6 @@
 // components/Form/index.js
+import {MyComponent}from '~/utils/component'
 import {commonProps, inputProps, textareaProps} from './props'
-const {MyComponent, nextTick} = require('~/utils/component')
 
 MyComponent({
   field: true,

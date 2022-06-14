@@ -1,6 +1,6 @@
 // components/Popup/Popup..js
-const {MyComponent} = require('../../utils/component')
-const transition = require('../../behaviors/transition')
+import {MyComponent}from '~/utils/component'
+import transition from '~/behaviors/transition'
 
 MyComponent({
   classes: [

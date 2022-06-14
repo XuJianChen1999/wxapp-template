@@ -1,10 +1,10 @@
 // components/Calendar/index.js
 import {requestAnimationFrame} from '~/utils/system'
+import {MyComponent}from '~/utils/component'
 import {
   ROW_HEIGHT, getPrevDay, getNextDay, getToday, compareDay, copyDates, 
   calcDateNum, formatMonthTitle, compareMonth, getMonths, getDayByOffset
 } from './utils'
-const {MyComponent} = require('~/utils/component')
 
 const initialMinDate = getToday().getTime()
 const initialMaxDate = (() => {

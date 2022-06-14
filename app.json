@@ -9,7 +9,9 @@
     "navigationBarTextStyle":"black"
   },
   "resolveAlias": {
-    "~/*": "/*"
+    "~/*": "/*",
+    "~/service/*": "service/*",
+    "~/behaviors/*": "behaviors/*"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

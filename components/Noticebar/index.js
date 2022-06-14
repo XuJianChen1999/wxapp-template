@@ -1,6 +1,6 @@
 // components/Noticebar/index.js
 import {getRect, requestAnimationFrame} from '~/utils/system'
-const {MyComponent} = require('~/utils/component')
+import {MyComponent}from '~/utils/component'
 
 MyComponent({
   props: {
@@ -62,9 +62,7 @@ MyComponent({
           getRect(this, '.van-notice-bar__content'),
           getRect(this, '.van-notice-bar__wrap'),
         ]).then(rects => {
-          
           const [contentRect, wrapRect] = rects
-          console.log(contentRect, wrapRect)
           const {speed, scrollable, delay} = this.data
           if (contentRect == null ||
             wrapRect == null ||

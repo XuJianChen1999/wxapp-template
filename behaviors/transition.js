@@ -1,5 +1,5 @@
-import {requestAnimationFrame} from '../utils/system'
-const {isObject} = require('../utils/type')
+import {requestAnimationFrame} from '~/utils/system'
+import {isObject} from '~/utils/type'
 
 const getClassNames = name => ({
   enter: `van-${name}-enter van-${name}-enter-active enter-class enter-active-class`,
