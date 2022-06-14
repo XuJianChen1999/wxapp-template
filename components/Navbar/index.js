@@ -32,9 +32,9 @@ MyComponent({
     },
   },
   data: {
-      height: 46,
+    height: 46,
   },
-  async created() {
+  created() {
     const {statusBarHeight} = wx.getSystemInfoSync()
     this.setData({
       statusBarHeight,
@@ -54,7 +54,7 @@ MyComponent({
     setHeight() {
       if (!this.data.fixed || !this.data.placeholder) return
       wx.nextTick(() => {
-        getRect(this, '.van-nav-bar').then((res) => {
+        getRect(this, '.van-nav-bar').then(res => {
           if (res && 'height' in res) {
             this.setData({height: res.height})
           }
