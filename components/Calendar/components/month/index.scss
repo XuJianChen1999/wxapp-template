@@ -1,19 +1,21 @@
 /* components/Calendar/components/month/index.wxss */
+@import '../../../../styles/var.scss';
+@import '../../../../styles/mixin.scss';
 @import '../../../../styles/component.scss';
 
 .van-calendar {
-  background-color: var(--calendar-background-color, #fff);
+  background-color: $background;
   display: flex;
   flex-direction: column;
   height: 100%
 }
 
 .van-calendar__month-title {
-  font-size: var(--calendar-month-title-font-size, 14px);
-  font-weight: var(--font-weight-bold, 500);
-  height: var(--calendar-header-title-height, 44px);
-  line-height: var(--calendar-header-title-height, 44px);
-  text-align: center
+  font-size: $font-size-m;
+  font-weight: 500;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
 }
 
 .van-calendar__days {
@@ -21,33 +23,31 @@
   flex-wrap: wrap;
   position: relative;
   -webkit-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 .van-calendar__month-mark {
-  color: var(--calendar-month-mark-color, rgba(242, 243, 245, .8));
-  font-size: var(--calendar-month-mark-font-size, 160px);
+  @include sc(320rpx, rgba(242, 243, 245, .8));
   left: 50%;
   pointer-events: none;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 0
+  z-index: 0;
 }
 
 .van-calendar__day,
 .van-calendar__selected-day {
-  align-items: center;
-  display: flex;
+  @include fl();
   justify-content: center;
   text-align: center
 }
 
 .van-calendar__day {
-  font-size: var(--calendar-day-font-size, 16px);
-  height: var(--calendar-day-height, 64px);
+  font-size: $font-size-h;
+  height: 128rpx;
   position: relative;
-  width: 14.285%
+  width: 14.285%;
 }
 
 .van-calendar__day--end,

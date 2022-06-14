@@ -1,20 +1,21 @@
 /* components/Calendar/index.wxss */
+@import '../../styles/var.scss';
 @import '../../styles/component.scss';
 
 .van-calendar {
-  background-color: var(--calendar-background-color, #fff);
+  background-color: $background;
   display: flex;
   flex-direction: column;
-  height: var(--calendar-height, 100%)
+  height: 100%;
 }
 
 .van-calendar__close-icon {
-  top: 11px
+  top: 11px;
 }
 
 .van-calendar__popup--bottom,
 .van-calendar__popup--top {
-  height: var(--calendar-popup-height, 80%)
+  height: 80%;
 }
 
 .van-calendar__popup--left,
@@ -30,7 +31,7 @@
 
 .van-calendar__footer {
   flex-shrink: 0;
-  padding: 0 var(--padding-md, 16px)
+  padding: 0 32rpx;
 }
 
 .van-calendar__footer--safe-area-inset-bottom {
@@ -47,7 +48,7 @@
 }
 
 .van-calendar__confirm {
-  height: var(--calendar-confirm-button-height, 36px) !important;
-  line-height: var(--calendar-confirm-button-line-height, 34px) !important;
-  margin: var(--calendar-confirm-button-margin, 7px 0) !important
+  height: 72rpx !important;
+  line-height: 68rpx !important;
+  margin: 14rpx 0 !important;
 }

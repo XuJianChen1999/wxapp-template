@@ -29,9 +29,7 @@ export function requestAnimationFrame(cb) {
     .createSelectorQuery()
     .selectViewport()
     .boundingClientRect()
-    .exec(() => {
-    cb()
-  })
+    .exec(() => cb())
 }
 
 export const getNetworkType = async () => {

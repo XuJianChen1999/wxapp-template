@@ -1,25 +1,25 @@
 /* components/Noticebar/index.wxss */
+@import '../../styles/var.scss';
+@import '../../styles/mixin.scss';
 @import '../../styles/component.scss';
 
 .van-notice-bar {
-  align-items: center;
-  background-color: var(--notice-bar-background-color, #fffbe8);
-  color: var(--notice-bar-text-color, #ed6a0c);
-  display: flex;
-  font-size: var(--notice-bar-font-size, 14px);
-  height: var(--notice-bar-height, 40px);
-  line-height: var(--notice-bar-line-height, 24px);
-  padding: var(--notice-bar-padding, 0 16px)
+  @include fl();
+  @include sc($font-size-m, #ed6a0c);
+  background-color: #fffbe8;
+  height: 80rpx;
+  line-height: 44rpx;
+  padding: 0 16rpx;
 }
 
 .van-notice-bar--withicon {
-  padding-right: 40px;
-  position: relative
+  padding-right: 80rpx;
+  position: relative;
 }
 
 .van-notice-bar--wrapable {
   height: auto;
-  padding: var(--notice-bar-wrapable-padding, 8px 16px)
+  padding: 16rpx 32rpx;
 }
 
 .van-notice-bar--wrapable .van-notice-bar__wrap {
@@ -28,31 +28,30 @@
 
 .van-notice-bar--wrapable .van-notice-bar__content {
   position: relative;
-  white-space: normal
+  white-space: normal;
 }
 
 .van-notice-bar__left-icon {
-  align-items: center;
-  display: flex;
-  margin-right: 4px;
-  vertical-align: middle
+  @include fl();
+  margin-right: 8rpx;
+  vertical-align: middle;
 }
 
 .van-notice-bar__left-icon,
 .van-notice-bar__right-icon {
-  font-size: var(--notice-bar-icon-size, 16px);
-  min-width: var(--notice-bar-icon-min-width, 22px)
+  font-size: $font-size-h;
+  min-width: 44rpx;
 }
 
 .van-notice-bar__right-icon {
   position: absolute;
-  right: 15px;
-  top: 10px
+  right: 30rpx;
+  top: 20rpx
 }
 
 .van-notice-bar__wrap {
   flex: 1;
-  height: var(--notice-bar-line-height, 24px);
+  height: 48rpx;
   overflow: hidden;
   position: relative
 }

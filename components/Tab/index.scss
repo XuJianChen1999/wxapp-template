@@ -8,14 +8,13 @@
   margin: 0 auto;
   max-width: 700rpx;
   .tab-item {
+    @include sc($font-size-m, #999);
     position: relative;
     z-index: 10;
     flex: 1;
     height: 80rpx;
     line-height: 80rpx;
     text-align: center;
-    font-size: $font-size-m;
-    color: #999;
     
     &.active {
       color: $font-color;

@@ -2,7 +2,7 @@
 @import '../../styles/component.scss';
 
 .van-overlay {
-  background-color: var(--overlay-background-color, rgba(0, 0, 0, .7));
+  background-color: rgba(0, 0, 0, .7);
   height: 100%;
   left: 0;
   position: fixed;
