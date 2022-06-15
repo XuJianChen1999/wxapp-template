@@ -18,7 +18,7 @@ export default function request(options) {
     const token = getToken()
     if (!token) {
       wx.showToast({
-        title: '请登录后操作',
+        title: '暂未登录',
         icon: 'none'
       })
       return
@@ -28,7 +28,7 @@ export default function request(options) {
       url,
       method = 'GET',         
       title = '加载中...',      // loading文字
-      failText = '请求数据失败', // 请求失败描述
+      failText = '请求失败',    // 请求失败描述
       errTip = 'toast',        // 错误提示，是Toast还说Modal
       data = {}, 
       header = {},
@@ -38,10 +38,9 @@ export default function request(options) {
       hideLoadingTime = 500    // 多少毫秒隐藏loading
     } = options
     const tHeader = {
-      'Authorization ': 'Bearer ' + token,
+      'Authorization ': 'Bearer ' + token, 
       ...header
     }
-    console.log(tHeader)
     loading && wx.showLoading({title, mask})
     wx.request({
       url,
