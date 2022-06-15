@@ -15,7 +15,7 @@ export const setItem = (key, value) => {
 }
 export const getItem = key => {
   if (!key) errorMsg('Storage key is required')
-  if (!isString(key)) errorMsg('string', key)
+  if (!isString(key)) argError('string', key)
 
   let data = wx.getStorageSync(key)
   try {

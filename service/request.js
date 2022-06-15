@@ -18,7 +18,7 @@ export default function request(options) {
     const token = getToken()
     if (!token) {
       wx.showToast({
-        title: '暂未登录',
+        title: '请登录后操作',
         icon: 'none'
       })
       return
@@ -38,7 +38,7 @@ export default function request(options) {
       hideLoadingTime = 500    // 多少毫秒隐藏loading
     } = options
     const tHeader = {
-      'Authorization ': 'Bearer ' + token, 
+      'Authorization ': 'Bearer ' + token,
       ...header
     }
     console.log(tHeader)
