@@ -7,9 +7,9 @@ function mapKeys(source, target, map) {
     }
   })
 }
-export function MyComponent(vantOptions) {
-  const options = {};
-  mapKeys(vantOptions, options, {
+export function MyComponent(myOptions) {
+  const options = {}
+  mapKeys(myOptions, options, {
     data: 'data',
     props: 'properties',
     mixins: 'behaviors',
@@ -27,13 +27,13 @@ export function MyComponent(vantOptions) {
   options.behaviors = options.behaviors || []
   options.behaviors.push(basic)
   // 添加relations
-  const {relation} = vantOptions
+  const {relation} = myOptions
   if (relation) {
     options.relations = relation.relations
     options.behaviors.push(relation.mixin)
   }
   // 映射behavior
-  if (vantOptions.field) {
+  if (myOptions.field) {
     options.behaviors.push('wx://form-field')
   }
   // 添加默认options

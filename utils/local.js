@@ -19,7 +19,10 @@ export const getItem = key => {
 
   let data = wx.getStorageSync(key)
   try {
-    return JSON.parse(data)
+    const jsonData = JSON.parse(data)
+    
+    if (isArray(jsonData) || isObject(jsonData)) return jsonData
+    else return data
   } catch (error) {
     return data || null
   }
