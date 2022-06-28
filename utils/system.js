@@ -20,8 +20,8 @@ export function getRect(context, selector) {
 }
 
 export function requestAnimationFrame(cb) {
-  const system = getSystemInfoSync()
-
+  const system = wx.getSystemInfoSync()
+  console.log(system)
   if (system.platform === 'devtools') {
     return setTimeout(() => {
       cb()
@@ -36,4 +36,27 @@ export function requestAnimationFrame(cb) {
 
 export const getNetworkType = async () => {
   return await wx.getNetworkType()
+}
+
+export const getImageInfo = src => {
+  return new Promise(resolve => {
+    wx.getImageInfo({
+      src,
+      success(res) {
+        const height = res.height * 750 / res.width
+        resolve({ ...res,
+          height,
+          src
+        })
+      },
+      fail(e) {
+        console.error(e)
+        resolve({
+          type: 'error',
+          height: 750,
+          src
+        })
+      }
+    })
+  })
 }

@@ -1,7 +1,17 @@
 <!--pages/test/index.wxml-->
-<Navbar title="标题"
-  left-text="返回">
-  <!-- <view class="current-date">
-     <text>4月24日</text>
-  </view> -->
-</Navbar>
+<Navbar title="标题" left-text="返回" fixed="{{true}}" />
+
+<view class="l-container">
+  <view id="left">
+    <view wx:for="{{leftList}}" wx:key="index">
+      <image src="{{item.url}}" data-leftIndex="{{index}}" binderror="loadError" mode='widthFix'></image>
+      <view>{{item.title}} --- {{item.error ? '这个图片出错了' : '成功'}}</view>
+    </view>
+  </view>
+  <view id="right">
+    <view wx:for="{{rightList}}" wx:key="index">
+      <image src="{{item.url}}" data-rightIndex="{{index}}" binderror="loadError" mode='widthFix'></image>
+      <view>{{item.title}} --- {{item.error ? '这个图片出错了' : '成功'}}</view>
+    </view>
+  </view>
+</view>

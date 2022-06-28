@@ -8,6 +8,16 @@ export default Behavior({
       this.setData({
         popupVisible: !popupVisible
       })
+    },
+    closePopup() {
+      this.setData({
+        popupVisible: false
+      })
+    },
+    openPopup() {
+      this.setData({
+        popupVisible: true
+      })
     }
   }
 })

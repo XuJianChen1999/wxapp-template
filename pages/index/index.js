@@ -1,16 +1,15 @@
 // index.js
 import {formatTime} from '~/function/date'
 import {getToken} from '~/utils/local'
-
-// 获取应用实例
-const app = getApp()
+import popup from '../../behaviors/popup'
 
 console.log(formatTime)
 console.log(getToken())
 
 Page({
+  behaviors: [popup],
   data: {
-    show: false,
+    // popupVisible: false,
     showCalendar: false,
     current: 0
   },
@@ -18,9 +17,13 @@ Page({
     
   },
   showPopup() {
+    // this.setPopupVisible()
     this.setData({
-      show: true
+      popupVisible: true
     })
+  },
+  clickOverlay() {
+    
   },
   clickCalendar() {
     this.setData({

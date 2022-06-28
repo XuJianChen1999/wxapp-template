@@ -1,1 +1,13 @@
 /* pages/test/index.wxss */
+.l-container {
+  display: flex;
+}
+#left, #right{
+  width: 48%;
+  margin: 0 1%;
+  
+ }
+ #left image, #right image{
+  width: 100%;
+  background-color: red;
+ }

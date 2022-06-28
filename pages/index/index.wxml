@@ -2,7 +2,7 @@
 <view class="container">
   <Tab tabs="{{[1, 2, 3]}}" current="{{current}}" bind:onSelectItem="onSelectItem" />
   <button bindtap="showPopup">点击</button>
-  <Popup show="{{show}}" closeOnClickOverlay="{{true}}" position="bottom">
+  <Popup show="{{popupVisible}}" bind:click-overlay="closePopup" position="bottom">
     <view style="width: 100vw; height: 300rpx;">
       哈哈哈哈
     </view>
